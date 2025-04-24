@@ -12,18 +12,18 @@ const itemsA = [
   },
   {
     title: "关于我",
-    url: "/about",
+    url: "/About",
     icon: CircleUser,
   }
 ]
 const AiItems = [
   {
     title: "Agent",
-    url: "/",
+    url: "/AI/Agent",
   },
   {
     title: "Rag",
-    url: "/",
+    url: "/AI/Rag",
   },
 ]
 const CodeList = [
@@ -83,7 +83,7 @@ export function AppSidebar() {
                 <SidebarMenuItem>
                   <CollapsibleTrigger asChild>
                     <SidebarMenuButton asChild>
-                      <Link href="/ai">
+                      <Link href="/AI">
                         <BrainCircuit/>
                         <span>AI大模型</span>
                         <ChevronRight className="ml-auto transition-transform group-data-[state=open]/collapsible:rotate-90"/>
@@ -112,7 +112,7 @@ export function AppSidebar() {
                 <SidebarMenuItem>
                   <CollapsibleTrigger asChild>
                     <SidebarMenuButton asChild>
-                      <Link href="/web">
+                      <Link href="/Web">
                         <Code/>
                         <span>Web Dev</span>
                         <ChevronRight className="ml-auto transition-transform group-data-[state=open]/collapsible:rotate-90"/>
