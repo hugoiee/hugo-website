@@ -6,6 +6,8 @@ import type {Metadata} from "next";
 import {Geist, Geist_Mono} from "next/font/google";
 import "./globals.css";
 import React from "react";
+import {Analytics} from "@vercel/analytics/react"
+import {SpeedInsights} from "@vercel/speed-insights/next"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,6 +43,8 @@ export default function RootLayout({children,}: Readonly<{
           <main className="flex flex-col min-h-screen w-full">
             <Navigation/>
             {children}
+            <Analytics/>
+            <SpeedInsights/>
           </main>
         </SidebarProvider>
       </ThemeProvider>
