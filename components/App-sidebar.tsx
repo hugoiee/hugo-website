@@ -1,9 +1,10 @@
 "use client";
 
 import {DropdownMenu, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
-import {Sidebar, SidebarContent, SidebarFooter, SidebarGroup, SidebarGroupContent, SidebarGroupLabel, SidebarHeader, SidebarMenu, SidebarMenuBadge, SidebarMenuButton, SidebarMenuItem, SidebarMenuSub, SidebarMenuSubItem,} from "@/components/ui/sidebar"
+import {Sidebar, SidebarContent, SidebarFooter, SidebarGroup, SidebarGroupContent, SidebarGroupLabel, SidebarHeader, SidebarMenu, SidebarMenuBadge, SidebarMenuButton, SidebarMenuItem,} from "@/components/ui/sidebar"
 import {BrainCircuit, ChevronUp, CircleUser, Code, Home, MessageCircleMore, Palette, User2} from "lucide-react"
 import Link from "next/link";
+import {usePathname} from 'next/navigation';
 
 const itemsA = [
   {
@@ -42,7 +43,11 @@ const itemsB = [
   },
 ]
 
+
+
 export function AppSidebar() {
+  const pathname = usePathname();
+  
   return (
     <Sidebar>
       
@@ -66,9 +71,9 @@ export function AppSidebar() {
             <SidebarMenu>
               {itemsA.map((item) => (
                 <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild>
-                    <Link href={item.url}>
-                      <item.icon/>
+                  <SidebarMenuButton asChild isActive={pathname === item.url}>
+                    <Link href={item.url} className={pathname === item.url ? 'text-primary' : ''}>
+                    <item.icon/>
                       <span>{item.title}</span>
                     </Link>
                   </SidebarMenuButton>
@@ -84,9 +89,9 @@ export function AppSidebar() {
             <SidebarMenu>
               {itemsB.map((item) => (
                 <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild>
-                    <Link href={item.url}>
-                      <item.icon/>
+                  <SidebarMenuButton asChild isActive={pathname === item.url}>
+                    <Link href={item.url} className={pathname === item.url ? 'text-primary' : ''}>
+                    <item.icon/>
                       <span>{item.title}</span>
                     </Link>
                   </SidebarMenuButton>
