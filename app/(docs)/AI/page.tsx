@@ -1,6 +1,12 @@
+"use client";
+
+import AiDocTable from "@/components/table/AiDocTable";
+
 const AiDoc = () => {
   return (
-    <div>AI</div>
+    <div className="max-w-[1024px] flex w-full mx-auto pt-8">
+      <AiDocTable/>
+    </div>
   )
 }
 

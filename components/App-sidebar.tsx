@@ -1,7 +1,8 @@
-import {Collapsible, CollapsibleContent, CollapsibleTrigger} from "@/components/ui/collapsible";
+"use client";
+
 import {DropdownMenu, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
-import {Sidebar, SidebarContent, SidebarFooter, SidebarGroup, SidebarGroupContent, SidebarGroupLabel, SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem, SidebarMenuSub, SidebarMenuSubItem,} from "@/components/ui/sidebar"
-import {BrainCircuit, ChevronRight, ChevronUp, CircleUser, Code, Home, User2} from "lucide-react"
+import {Sidebar, SidebarContent, SidebarFooter, SidebarGroup, SidebarGroupContent, SidebarGroupLabel, SidebarHeader, SidebarMenu, SidebarMenuBadge, SidebarMenuButton, SidebarMenuItem, SidebarMenuSub, SidebarMenuSubItem,} from "@/components/ui/sidebar"
+import {BrainCircuit, ChevronUp, CircleUser, Code, Home, MessageCircleMore, Palette, User2} from "lucide-react"
 import Link from "next/link";
 
 const itemsA = [
@@ -14,26 +15,30 @@ const itemsA = [
     title: "关于我",
     url: "/About",
     icon: CircleUser,
-  }
-]
-const AiItems = [
-  {
-    title: "Agent",
-    url: "/AI/Agent",
-  },
-  {
-    title: "Rag",
-    url: "/AI/Rag",
   },
 ]
-const CodeList = [
+const itemsB = [
   {
-    title: "Next",
-    url: "/",
+    title: "AI 大模型",
+    url: "/AI",
+    icon: BrainCircuit,
+    number: 2,
   },
   {
-    title: "React",
-    url: "/",
+    title: "Web Dev",
+    url: "/Web",
+    icon: Code,
+    number: 1,
+  }, {
+    title: "Design",
+    url: "/Design",
+    icon: Palette,
+    number: 1,
+  }, {
+    title: "Chat",
+    url: "/Chat",
+    icon: MessageCircleMore,
+    number: 0,
   },
 ]
 
@@ -77,63 +82,17 @@ export function AppSidebar() {
           <SidebarGroupLabel>文章专栏</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
-              
-              {/*AI专栏*/}
-              <Collapsible defaultOpen className="group/collapsible">
-                <SidebarMenuItem>
-                  <CollapsibleTrigger asChild>
-                    <SidebarMenuButton asChild>
-                      <Link href="/AI">
-                        <BrainCircuit/>
-                        <span>AI大模型</span>
-                        <ChevronRight className="ml-auto transition-transform group-data-[state=open]/collapsible:rotate-90"/>
-                      </Link>
-                    </SidebarMenuButton>
-                  </CollapsibleTrigger>
-                  <CollapsibleContent>
-                    <SidebarMenuSub>
-                      <SidebarMenuSubItem>
-                        {AiItems.map((item) => (
-                          <SidebarMenuButton asChild key={item.title}>
-                            <Link href={item.url}>
-                              <span>{item.title}</span>
-                            </Link>
-                          </SidebarMenuButton>
-                        ))}
-                      </SidebarMenuSubItem>
-                    </SidebarMenuSub>
-                  </CollapsibleContent>
+              {itemsB.map((item) => (
+                <SidebarMenuItem key={item.title}>
+                  <SidebarMenuButton asChild>
+                    <Link href={item.url}>
+                      <item.icon/>
+                      <span>{item.title}</span>
+                    </Link>
+                  </SidebarMenuButton>
+                  <SidebarMenuBadge>{item.number}</SidebarMenuBadge>
                 </SidebarMenuItem>
-              
-              </Collapsible>
-              
-              {/*代码专栏*/}
-              <Collapsible defaultOpen className="group/collapsible">
-                <SidebarMenuItem>
-                  <CollapsibleTrigger asChild>
-                    <SidebarMenuButton asChild>
-                      <Link href="/Web">
-                        <Code/>
-                        <span>Web Dev</span>
-                        <ChevronRight className="ml-auto transition-transform group-data-[state=open]/collapsible:rotate-90"/>
-                      </Link>
-                    </SidebarMenuButton>
-                  </CollapsibleTrigger>
-                  <CollapsibleContent>
-                    <SidebarMenuSub>
-                      <SidebarMenuSubItem>
-                        {CodeList.map((item) => (
-                          <SidebarMenuButton asChild key={item.title}>
-                            <Link href={item.url}>
-                              <span>{item.title}</span>
-                            </Link>
-                          </SidebarMenuButton>
-                        ))}
-                      </SidebarMenuSubItem>
-                    </SidebarMenuSub>
-                  </CollapsibleContent>
-                </SidebarMenuItem>
-              </Collapsible>
+              ))}
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>

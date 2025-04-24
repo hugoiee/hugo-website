@@ -1,11 +1,11 @@
 "use client";
 
-import WebDocTable from "@/components/table/WebDocTable";
+import DesignDocTable from "@/components/table/DesignDocTable";
 
 const WebDoc = () => {
   return (
     <div className="max-w-[1024px] flex w-full mx-auto pt-8">
-      <WebDocTable/>
+      <DesignDocTable/>
     </div>
   )
 }

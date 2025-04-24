@@ -1,3 +1,5 @@
+"use client";
+
 const Footer = () => {
   return (
     <div className="text-center text-sm h-5 py-5">

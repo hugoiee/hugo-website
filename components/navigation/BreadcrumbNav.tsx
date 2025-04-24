@@ -1,5 +1,8 @@
+"use client";
+
 import {Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbSeparator} from "@/components/ui/breadcrumb";
 import React from "react";
+import {usePathname} from "next/navigation";
 
 interface BreadcrumbNavProps {
   OneNav: string
@@ -7,12 +10,15 @@ interface BreadcrumbNavProps {
 }
 
 const BreadcrumbNav = ({OneNav, TwoNav}: BreadcrumbNavProps) => {
+  const pathname = usePathname();
+  const pathSegments = pathname.split('/').filter(segment => segment !== '');
+  
   return (
     <div>
       <Breadcrumb>
         <BreadcrumbList>
           <BreadcrumbItem>
-            <BreadcrumbLink href="/">{OneNav}</BreadcrumbLink>
+            <BreadcrumbLink href={`/${pathSegments[0]}`}>{OneNav}</BreadcrumbLink>
           </BreadcrumbItem>
           {TwoNav && (
             <>
