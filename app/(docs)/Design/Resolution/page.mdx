@@ -1,0 +1,100 @@
+import Footer from "../../../../components/footer";
+import MainContent from "../../../../components/main-content";
+
+export const metadata = {
+  title: '像素与分辨率',
+  description: 'CSS中像素与分辨率的关系',
+}
+
+<MainContent>
+
+  # 分辨率与像素
+  CSS中最常用的属性是 px ，但是px是一个抽象逻辑单位，在不同设备、分辨率下，px所代表的物理像素是不一样的
+
+  ## 设备像素、物理分辨率
+
+  物理分辨率是平米硬件层面的最小显示单元 (pt)，屏幕在产生时就已经确定了其设备像素的数量和排列方式。
+
+  | 俗语 | 分辨率 | 设备像素 | 简写 |
+  | ----- | ---------- | ------- | ----- |
+  | 4k | 3840\*2160 | 7372800 | 2160P |
+  | 2k | 2560\*1440 | 3686400 | 1440P |
+  | 1080P | 1920\*1080 | 2073600 | 1080P |
+
+  上面提到的分辨率是指`物理分辨率`，一个物理像素点由 `pt` 来表示，`pt`是物理绝对尺寸单位，大小始终固定，指的是 72分之一英寸(inch)
+
+  ```math
+  1pt=1/72inch
+  ```
+
+  ```math
+  1inch = 2.54cm
+  ```
+
+  ## 设备独立像素、逻辑分辨率
+
+  逻辑分辨率指的是可以通过程序控制的虚拟像素，常用的 `px` 就是一个逻辑像素单位，也就是相对单位。
+
+  Browser 的DevTool中，可以通过下述命令查看当前设备的逻辑分辨率。
+
+  ```js
+  window.screen.width
+  winwow.screen.height
+  ```
+
+  ## 设备分辨率缩放比 (dpr)
+
+  设备像素比 `dpr` 指的是物理分辨率和逻辑分辨率的比值。
+
+  可以通过下述命令查看
+  ```js
+  window.devicePixelRatio
+  ```
+
+  例如：Studio Display的物理分辨率是 5120\*2880 ，但是默认的逻辑分辨率是 1440P。
+
+  $$devicePixelRatio = 物理分辨率 / 逻辑分辨率$$
+
+  根据公式因此，当前的设备分辨率缩放比为 `2`。
+
+  此时 1个px在我的电脑上，就对应了2个物理像素。 `1px = 2pt`。
+
+  ![](https://raw.githubusercontent.com/hugoiee/images/master/Studio%20Display%E5%88%86%E8%BE%A8%E7%8E%87.jpg)
+
+  ## 浏览器缩放比
+
+  浏览器提供网页缩放的功能，和修改屏幕分辨率不同，修改网页缩放比是在`dpr`的基础之上进行修改。
+
+  Exa：我当前的设备dpr是2，我在浏览器设置的网页缩放为 150%。那么对网页而言，新的设备分辨率缩放比为 `2*1.5=3`
+
+  ```js
+  window.devicePixelRatio = 2 * 1.5 = 3
+  1px === 3pt
+  ```
+
+  ## 屏幕大小的表述方式：英寸
+
+  通常我们使用 英寸 inch 来表示一个屏幕的物理尺寸大小，这个尺寸大小指的是==屏幕显示器对角线的长度==。
+
+  ```math
+  size = √width2+height2
+  ```
+
+  ```math
+  1inch = 2.54cm
+  ```
+
+  ## PPI
+
+  PPI 每英寸像素，表示每英寸所包含的像素点数目 === 像素密度。数值越高，说明屏幕能以更高密度显示图像，画面的细节就会越丰富。
+
+  ```math
+  PPI=√(X2+Y2)/size
+  ```
+
+  size表示屏幕尺寸，x和y表示屏幕的物理分辨率
+
+  ![](https://raw.githubusercontent.com/hugoiee/images/master/Studio%20Display%20PPI%E8%AE%A1%E7%AE%97.jpg)
+
+  <Footer/>
+</MainContent>

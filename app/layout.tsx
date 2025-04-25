@@ -29,6 +29,9 @@ export default function RootLayout({children,}: Readonly<{
 }>) {
   return (
     <html lang="zh" suppressHydrationWarning>
+    <head>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"/>
+    </head>
     <body
       className={`${geistSans.variable} ${geistMono.variable} antialiased`}
     >
@@ -40,7 +43,7 @@ export default function RootLayout({children,}: Readonly<{
       >
         <SidebarProvider>
           <AppSidebar/>
-          <main className="flex flex-col flex-1 min-h-screen w-full">
+          <main className="flex flex-col flex-1 min-h-screen w-full pt-16">
             <Navigation/>
             {children}
             <Analytics/>
