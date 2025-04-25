@@ -1,6 +1,19 @@
 'use client'
 
 import {
+  BrainCircuit,
+  ChevronUp,
+  CircleUser,
+  Code,
+  Home,
+  MessageCircleMore,
+  Palette,
+  User2,
+} from 'lucide-react'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+
+import {
   DropdownMenu,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
@@ -17,18 +30,6 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from '@/components/ui/sidebar'
-import {
-  BrainCircuit,
-  ChevronUp,
-  CircleUser,
-  Code,
-  Home,
-  MessageCircleMore,
-  Palette,
-  User2,
-} from 'lucide-react'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
 
 const itemsA = [
   {

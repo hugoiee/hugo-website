@@ -1,11 +1,12 @@
 'use client'
 
+import { usePathname } from 'next/navigation'
+import React from 'react'
+
 import { ModeToggle } from '@/components/ModeToggle'
 import BreadcrumbNav from '@/components/navigation/BreadcrumbNav'
 import { Separator } from '@/components/ui/separator'
 import { SidebarTrigger } from '@/components/ui/sidebar'
-import { usePathname } from 'next/navigation'
-import React from 'react'
 
 const Navigation = () => {
   const pathname = usePathname()

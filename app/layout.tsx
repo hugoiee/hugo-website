@@ -1,57 +1,63 @@
-import {AppSidebar} from "@/components/App-sidebar";
-import Navigation from "@/components/navigation";
-import {ThemeProvider} from "@/components/theme-provider";
-import {SidebarProvider} from "@/components/ui/sidebar";
-import type {Metadata} from "next";
-import {Geist, Geist_Mono} from "next/font/google";
-import "./globals.css";
-import React from "react";
-import {Analytics} from "@vercel/analytics/react"
-import {SpeedInsights} from "@vercel/speed-insights/next"
+import { AppSidebar } from '@/components/App-sidebar'
+import Navigation from '@/components/navigation'
+import { ThemeProvider } from '@/components/theme-provider'
+import { SidebarProvider } from '@/components/ui/sidebar'
+
+import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
+import type { Metadata } from 'next'
+import { Geist, Geist_Mono } from 'next/font/google'
+import './globals.css'
+import React from 'react'
 
 const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+  variable: '--font-geist-sans',
+  subsets: ['latin'],
+})
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+  variable: '--font-geist-mono',
+  subsets: ['latin'],
+})
 
 export const metadata: Metadata = {
-  title: "Hugo成长之路",
-  description: "Hugo的成长之路，记录了AI和前端知识的分享，以及生活专栏",
-};
+  title: 'Hugo成长之路',
+  description: 'Hugo的成长之路，记录了AI和前端知识的分享，以及生活专栏',
+}
 
-export default function RootLayout({children,}: Readonly<{
-  children: React.ReactNode;
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode
 }>) {
   return (
     <html lang="zh" suppressHydrationWarning>
-    <head>
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"/>
-    </head>
-    <body
-      className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-    >
-      <ThemeProvider
-        attribute="class"
-        defaultTheme="system"
-        enableSystem
-        disableTransitionOnChange
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"
+        />
+      </head>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <SidebarProvider>
-          <AppSidebar/>
-          <main className="flex flex-col flex-1 min-h-screen w-full ">
-            <Navigation/>
-            {children}
-            <Analytics/>
-            <SpeedInsights/>
-          </main>
-        </SidebarProvider>
-      </ThemeProvider>
-    </body>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <SidebarProvider>
+            <AppSidebar />
+            <main className="flex min-h-screen w-full flex-1 flex-col">
+              <Navigation />
+              {children}
+              <Analytics />
+              <SpeedInsights />
+            </main>
+          </SidebarProvider>
+        </ThemeProvider>
+      </body>
     </html>
-  );
+  )
 }

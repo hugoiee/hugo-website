@@ -1,5 +1,8 @@
 'use client'
 
+import { usePathname } from 'next/navigation'
+import React from 'react'
+
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -7,8 +10,6 @@ import {
   BreadcrumbList,
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb'
-import { usePathname } from 'next/navigation'
-import React from 'react'
 
 interface BreadcrumbNavProps {
   OneNav: string
