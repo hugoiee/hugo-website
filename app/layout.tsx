@@ -43,7 +43,7 @@ export default function RootLayout({children,}: Readonly<{
       >
         <SidebarProvider>
           <AppSidebar/>
-          <main className="flex flex-col flex-1 min-h-screen w-full pt-16">
+          <main className="flex flex-col flex-1 min-h-screen w-full ">
             <Navigation/>
             {children}
             <Analytics/>
