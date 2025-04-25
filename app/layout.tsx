@@ -22,6 +22,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Hugo成长之路",
   description: "Hugo的成长之路，记录了AI和前端知识的分享，以及生活专栏",
+  manifest: 'https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css',
 };
 
 export default function RootLayout({children,}: Readonly<{
@@ -29,9 +30,6 @@ export default function RootLayout({children,}: Readonly<{
 }>) {
   return (
     <html lang="zh" suppressHydrationWarning>
-    <head>
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"/>
-    </head>
     <body
       className={`${geistSans.variable} ${geistMono.variable} antialiased`}
     >

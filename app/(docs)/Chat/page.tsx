@@ -2,7 +2,7 @@
 
 const AiDoc = () => {
   return (
-    <div className="max-w-[1024px] flex w-full mx-auto pt-8">
+    <div className="max-w-[1024px] flex w-full mx-auto pt-8 px-7.5">
       闲聊专栏
     </div>
   )
