@@ -4,6 +4,12 @@ import Link from "next/link";
 
 const list = [
   {
+    id: "Dev002",
+    title: "1px精度问题",
+    body: "1px引发的精度偏移问题",
+    update: "2025-3-1",
+    url: "/Web/1pxAccurate",
+  }, {
     id: "Dev001",
     title: "从0-1搭建个人网站",
     body: "小白从0-1搭建个人网站",
