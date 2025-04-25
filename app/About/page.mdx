@@ -1,5 +1,6 @@
 import Footer from "@/components/footer";
 import MainContent from "@/components/main-content";
+import Image from 'next/image'
 
 export const metadata = {
   title: '关于-Hugo',
@@ -21,6 +22,29 @@ export const metadata = {
 
   ## 我的专业技能
 
+  <div className="flex gap-4 mb-4">
+    熟练使用：
+    <Image src="./icon/skill/html-light.svg" width={24} height={24} alt={''}/>
+    <Image src="./icon/skill/css-light.svg" width={24} height={24} alt={''}/>
+    <Image src="./icon/skill/js-light.svg" width={24} height={24} alt={''}/>
+  </div>
 
-  <Footer />
+  <div className="flex gap-4 mb-4">
+    最拿手的：
+    <Image src="./icon/skill/react-light.svg" width={24} height={24} alt={''}/>
+    <Image src="./icon/skill/next-light.svg" width={24} height={24} alt={''}/>
+    <Image src="./icon/skill/tail-light.svg" width={24} height={24} alt={''}/>
+    <Image src="./icon/skill/vite-light.svg" width={24} height={24} alt={''}/>
+    <Image src="./icon/skill/du-light.svg" width={24} height={24} alt={''}/>
+  </div>
+
+  <div className="flex gap-4 mb-4">
+    可以玩的：
+    <Image src="./icon/skill/figma-light.svg" width={24} height={24} alt={''}/>
+    <Image src="./icon/skill/three-light.svg" width={24} height={24} alt={''}/>
+    <Image src="./icon/skill/sass-light.svg" width={24} height={24} alt={''}/>
+    <Image src="./icon/skill/ts-light.svg" width={24} height={24} alt={''}/>
+  </div>
+
+  <Footer/>
 </MainContent>
