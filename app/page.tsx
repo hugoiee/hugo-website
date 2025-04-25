@@ -1,4 +1,11 @@
+import type { Metadata } from 'next'
+
 import Footer from '@/components/footer'
+
+export const metadata: Metadata = {
+  title: 'Hugo成长之路',
+  description: '欢迎你的访问，希望内容能对你有帮助',
+}
 
 export default function Home() {
   return (
