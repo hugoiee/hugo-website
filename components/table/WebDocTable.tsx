@@ -1,26 +1,34 @@
-import {Button} from "@/components/ui/button";
-import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow,} from "@/components/ui/table"
-import Link from "next/link";
+import { Button } from '@/components/ui/button'
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from '@/components/ui/table'
+import Link from 'next/link'
 
 const list = [
   {
-    id: "Dev002",
-    title: "1px精度问题",
-    body: "1px引发的精度偏移问题",
-    update: "2025-3-1",
-    url: "/Web/1pxAccurate",
-  }, {
-    id: "Dev001",
-    title: "从0-1搭建个人网站",
-    body: "小白从0-1搭建个人网站",
-    update: "2025-2-9",
-    url: "/Web/0-1",
-  }
+    id: 'Dev002',
+    title: '1px精度问题',
+    body: '1px引发的精度偏移问题',
+    update: '2025-3-1',
+    url: '/Web/1pxAccurate',
+  },
+  {
+    id: 'Dev001',
+    title: '从0-1搭建个人网站',
+    body: '小白从0-1搭建个人网站',
+    update: '2025-2-9',
+    url: '/Web/0-1',
+  },
 ]
 
 function WebDocTable() {
   return (
-    <div className="max-w-[1024px] flex w-full mx-auto pt-8 px-7.5">
+    <div className="mx-auto flex w-full max-w-[1024px] px-7.5 pt-8">
       <Table>
         <TableHeader>
           <TableRow>
@@ -38,7 +46,11 @@ function WebDocTable() {
               <TableCell>{list.title}</TableCell>
               <TableCell>{list.body}</TableCell>
               <TableCell>{list.update}</TableCell>
-              <TableCell><Button variant="link"><Link href={list.url}>点击阅读</Link></Button></TableCell>
+              <TableCell>
+                <Button variant="link">
+                  <Link href={list.url}>点击阅读</Link>
+                </Button>
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>
@@ -47,4 +59,4 @@ function WebDocTable() {
   )
 }
 
-export default WebDocTable;
+export default WebDocTable

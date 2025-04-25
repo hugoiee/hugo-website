@@ -1,11 +1,9 @@
-"use client";
+'use client'
 
-import AiDocTable from "@/components/table/AiDocTable";
+import AiDocTable from '@/components/table/AiDocTable'
 
 const AiDoc = () => {
-  return (
-    <AiDocTable/>
-  )
+  return <AiDocTable />
 }
 
-export default AiDoc;
+export default AiDoc

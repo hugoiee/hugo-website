@@ -1,20 +1,27 @@
-import {Button} from "@/components/ui/button";
-import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow,} from "@/components/ui/table"
-import Link from "next/link";
+import { Button } from '@/components/ui/button'
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from '@/components/ui/table'
+import Link from 'next/link'
 
 const list = [
   {
-    id: "Design001",
-    title: "像素与分辨率",
-    body: "像素与分辨率的关系",
-    update: "2025-2-9",
-    url: "/Design/Resolution",
-  }
+    id: 'Design001',
+    title: '像素与分辨率',
+    body: '像素与分辨率的关系',
+    update: '2025-2-9',
+    url: '/Design/Resolution',
+  },
 ]
 
 function DesignDocTable() {
   return (
-    <div className="max-w-[1024px] flex w-full mx-auto pt-8 px-7.5">
+    <div className="mx-auto flex w-full max-w-[1024px] px-7.5 pt-8">
       <Table>
         <TableHeader>
           <TableRow>
@@ -32,7 +39,11 @@ function DesignDocTable() {
               <TableCell>{list.title}</TableCell>
               <TableCell>{list.body}</TableCell>
               <TableCell>{list.update}</TableCell>
-              <TableCell><Button variant="link"><Link href={list.url}>点击阅读</Link></Button></TableCell>
+              <TableCell>
+                <Button variant="link">
+                  <Link href={list.url}>点击阅读</Link>
+                </Button>
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>
@@ -41,4 +52,4 @@ function DesignDocTable() {
   )
 }
 
-export default DesignDocTable;
+export default DesignDocTable

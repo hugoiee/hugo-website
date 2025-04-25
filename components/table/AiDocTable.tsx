@@ -1,26 +1,34 @@
-import {Button} from "@/components/ui/button";
-import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow,} from "@/components/ui/table"
-import Link from "next/link";
+import { Button } from '@/components/ui/button'
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from '@/components/ui/table'
+import Link from 'next/link'
 
 const list = [
   {
-    id: "AI001",
-    title: "Agent揭秘",
-    body: "Ai Agent详解",
-    update: "2025-3-2",
-    url: "/AI/Agent",
-  }, {
-    id: "AI002",
-    title: "RAG技术",
-    body: "RAR增强检索技术详解",
-    update: "2025-3-2",
-    url: "/AI/Rag",
+    id: 'AI001',
+    title: 'Agent揭秘',
+    body: 'Ai Agent详解',
+    update: '2025-3-2',
+    url: '/AI/Agent',
+  },
+  {
+    id: 'AI002',
+    title: 'RAG技术',
+    body: 'RAR增强检索技术详解',
+    update: '2025-3-2',
+    url: '/AI/Rag',
   },
 ]
 
 function AiDocTable() {
   return (
-    <div className="max-w-[1024px] flex w-full mx-auto pt-8 px-7.5">
+    <div className="mx-auto flex w-full max-w-[1024px] px-7.5 pt-8">
       <Table>
         <TableHeader>
           <TableRow>
@@ -38,7 +46,11 @@ function AiDocTable() {
               <TableCell>{list.title}</TableCell>
               <TableCell>{list.body}</TableCell>
               <TableCell>{list.update}</TableCell>
-              <TableCell><Button variant="link"><Link href={list.url}>点击阅读</Link></Button></TableCell>
+              <TableCell>
+                <Button variant="link">
+                  <Link href={list.url}>点击阅读</Link>
+                </Button>
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>
@@ -47,4 +59,4 @@ function AiDocTable() {
   )
 }
 
-export default AiDocTable;
+export default AiDocTable

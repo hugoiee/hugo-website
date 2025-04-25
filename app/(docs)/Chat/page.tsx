@@ -1,11 +1,11 @@
-"use client";
+'use client'
 
 const AiDoc = () => {
   return (
-    <div className="max-w-[1024px] flex w-full mx-auto pt-8 px-7.5">
+    <div className="mx-auto flex w-full max-w-[1024px] px-7.5 pt-8">
       闲聊专栏
     </div>
   )
 }
 
-export default AiDoc;
+export default AiDoc

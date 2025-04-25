@@ -1,11 +1,9 @@
-"use client";
+'use client'
 
-import DesignDocTable from "@/components/table/DesignDocTable";
+import DesignDocTable from '@/components/table/DesignDocTable'
 
 const WebDoc = () => {
-  return (
-    <DesignDocTable/>
-  )
+  return <DesignDocTable />
 }
 
-export default WebDoc;
+export default WebDoc
