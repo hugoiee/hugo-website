@@ -1,7 +1,5 @@
 import type { Metadata } from 'next'
 
-import Footer from '@/components/footer'
-
 export const metadata: Metadata = {
   title: 'Hugo成长之路',
   description: '欢迎你的访问，希望内容能对你有帮助',
@@ -10,7 +8,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <div className="flex h-[calc(100vh-124px)] flex-col items-center justify-center gap-6 bg-[url(/bgImage-light.png)] bg-cover bg-center bg-no-repeat text-center dark:bg-[url(/bgImage.png)]">
+      <div className="flex h-[calc(100vh-64px)] flex-col items-center justify-center gap-6 bg-[url(/bgImage-light.png)] bg-cover bg-center bg-no-repeat text-center dark:bg-[url(/bgImage.png)]">
         <p className="animate__animated animate__swing text-7xl">👋</p>
         <p className="animate__animated animate__bounceInRight text-xl">
           嗨，我是 Hugo 🎉
@@ -22,7 +20,6 @@ export default function Home() {
           热爱分享，喜欢学习新的技术和框架。
         </p>
       </div>
-      <Footer />
     </>
   )
 }
