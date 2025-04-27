@@ -114,10 +114,21 @@ export function AppSidebar() {
             <SidebarMenu>
               {itemsB.map((item) => (
                 <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild isActive={pathname === item.url}>
+                  <SidebarMenuButton
+                    asChild
+                    isActive={
+                      pathname === item.url ||
+                      pathname.startsWith(`${item.url}/`)
+                    }
+                  >
                     <Link
                       href={item.url}
-                      className={pathname === item.url ? 'text-primary' : ''}
+                      className={
+                        pathname === item.url ||
+                        pathname.startsWith(`${item.url}/`)
+                          ? 'text-primary'
+                          : ''
+                      }
                     >
                       <item.icon />
                       <span>{item.title}</span>
