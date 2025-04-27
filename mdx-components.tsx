@@ -23,6 +23,10 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     h6: (props) => (
       <h6 className="mt-5 mb-4 text-sm font-bold text-[#777777]" {...props} />
     ),
+    // **加粗**
+    strong: (props) => (
+      <strong className="font-bold text-amber-500" {...props} />
+    ),
     pre: (props) => (
       <pre
         className="my-4 rounded-lg bg-[#f6f8fa] p-4 text-sm leading-5 dark:text-black"
@@ -46,16 +50,20 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     ),
     // 列表
     ul: ({ children }) => (
-      <ul className="my-4 list-disc pl-5 text-gray-300">{children}</ul>
+      <ul className="my-4 list-disc pl-5 text-black dark:text-gray-300">
+        {children}
+      </ul>
     ),
     ol: ({ children }) => (
-      <ol className="my-4 list-decimal pl-5 text-gray-300">{children}</ol>
+      <ol className="my-4 list-decimal pl-5 text-black dark:text-gray-300">
+        {children}
+      </ol>
     ),
     li: ({ children }) => <li className="my-1">{children}</li>,
 
     // 块级引用
     blockquote: ({ children }) => (
-      <blockquote className="my-4 rounded-r border-l-4 border-gray-600 bg-gray-800/30 py-1 pl-4 text-gray-400 italic">
+      <blockquote className="my-4 rounded-r border-l-4 border-gray-600 bg-gray-800/30 py-1 pl-4 text-black italic dark:text-gray-400">
         {children}
       </blockquote>
     ),
@@ -95,6 +103,5 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     td: ({ children }) => <td className="px-4 py-2">{children}</td>,
 
     // 自定义
-    kbd: ({ children }) => <mpath className="text-4xl">{children}</mpath>,
   }
 }

@@ -13,17 +13,10 @@ import {
 const list = [
   {
     id: 'AI001',
-    title: 'Agent揭秘',
-    body: 'Ai Agent详解',
+    title: 'Agent or WorkFLow',
+    body: '带你认清楚什么是Agent和WorkFLow',
     update: '2025-3-2',
-    url: '/AI/Agent',
-  },
-  {
-    id: 'AI002',
-    title: 'RAG技术',
-    body: 'RAR增强检索技术详解',
-    update: '2025-3-2',
-    url: '/AI/Rag',
+    url: '/AI/AgentVsWorkflow',
   },
 ]
 

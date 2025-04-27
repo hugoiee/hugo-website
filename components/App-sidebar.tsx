@@ -45,16 +45,16 @@ const itemsA = [
 ]
 const itemsB = [
   {
-    title: 'AI 大模型',
+    title: 'AI那些事',
     url: '/AI',
     icon: BrainCircuit,
-    number: 2,
+    number: 1,
   },
   {
-    title: 'Web Dev',
+    title: 'WebDev',
     url: '/Web',
     icon: Code,
-    number: 2,
+    number: 1,
   },
   {
     title: 'Design',
