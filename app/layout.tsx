@@ -1,14 +1,16 @@
-import { AppSidebar } from '@/components/App-sidebar'
-import Navigation from '@/components/navigation'
-import { ThemeProvider } from '@/components/theme-provider'
-import { SidebarProvider } from '@/components/ui/sidebar'
-
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
-import './globals.css'
 import React from 'react'
+
+import { AppSidebar } from '@/components/App-sidebar'
+import Navigation from '@/components/navigation'
+import { ThemeProvider } from '@/components/theme-provider'
+
+import './globals.css'
+
+import { SidebarProvider } from '@/components/ui/sidebar'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',

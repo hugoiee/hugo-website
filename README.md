@@ -10,7 +10,9 @@ export const metadata = {
 }
 
 <MainContent>
+  <article>
   // 在此处开始写MarkDown
+  </article>
   <Footer/>
 </MainContent>
 ```

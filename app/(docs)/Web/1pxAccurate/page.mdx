@@ -7,48 +7,48 @@ export const metadata = {
 }
 
 <MainContent>
+  <article>
+    # 1px边框精度
 
-  # 1px边框精度
+    **问题原因：**
+    <br/>
+    设计师给出的1px放到高DPR的尺寸上，真实的视觉效果会比设计稿的1px要粗一些，从而导致矛盾的产生。
+    <br/>
+    产生这个问题的原因依然是在高 dpr 的设备中，`1px = 2pt` ，或者 `1px = 3pt`。从而使得视觉效果上，宽度变粗了，从而**失去了极细边框带来的设计感**。
 
-  **问题原因：**
-  <br/>
-  设计师给出的1px放到高DPR的尺寸上，真实的视觉效果会比设计稿的1px要粗一些，从而导致矛盾的产生。
-  <br/>
-  产生这个问题的原因依然是在高 dpr 的设备中，`1px = 2pt` ，或者 `1px = 3pt`。从而使得视觉效果上，宽度变粗了，从而**失去了极细边框带来的设计感**。
+    ## plan A ：媒体查询
 
-  ## plan A ：媒体查询
-
-  ```css
-  .box:{
-    border-width: 1px;
+    ```css
+    .box:{
+    border - width: 1px;
   }
-  // 为 Retina 屏幕加载更清晰的图片
-  @media screen and (-webkit-min-device-pixel-ratio: 2),
-         screen and (min-resolution: 2dppx) {
+    // 为 Retina 屏幕加载更清晰的图片
+    @media screen and (-webkit-min-device-pixel-ratio: 2),
+    screen and (min-resolution: 2dppx) {
     .box{
-      border-width: 0.5px;
-    }
+    border-width: 0.5px;
+  }
   }
 
-  // 为高 DPI 设备调整 UI 细节
-  @media screen and (-webkit-min-device-pixel-ratio: 3),
-         screen and (min-resolution: 3dppx) {
+    // 为高 DPI 设备调整 UI 细节
+    @media screen and (-webkit-min-device-pixel-ratio: 3),
+    screen and (min-resolution: 3dppx) {
     .box{
-      border-width: 0.33px;
-    }
+    border-width: 0.33px;
   }
-  ```
+  }
+    ```
 
-  ## plan B ：模拟边框，使用缩放
+    ## plan B ：模拟边框，使用缩放
 
-  通过`伪类、box-shadow、背景遮挡`等思路模拟一个元素的边框，然后通过媒体查询缩放的方式来做到精准的 1px。
+    通过`伪类、box-shadow、背景遮挡`等思路模拟一个元素的边框，然后通过媒体查询缩放的方式来做到精准的 1px。
 
-  ```css
-  .box {
+    ```css
+    .box {
     position: relative
   }
 
-  .box::after {
+    .box::after {
     content: "";
     display: block;
     position: absolute;
@@ -61,26 +61,26 @@ export const metadata = {
     transform: scale(1);
   }
 
-  @media screen and (-webkit-min-device-pixel-ratio: 2) {
+    @media screen and (-webkit-min-device-pixel-ratio: 2) {
     .box::after {
-      width: 200%;
-      height: 200%;
-      transform: scale(0.5);
-    }
+    width: 200%;
+    height: 200%;
+    transform: scale(0.5);
+  }
   }
 
-  @media screen and (-webkit-min-device-pixel-ratio: 3) {
+    @media screen and (-webkit-min-device-pixel-ratio: 3) {
     .box::after {
-      width: 300%;
-      height: 300%;
-      transform: scale(0.333);
-    }
+    width: 300%;
+    height: 300%;
+    transform: scale(0.333);
   }
-  ```
+  }
+    ```
 
 
-  这里的核心思路就是在 `dpr = 2` 时，我们先把伪类宽高尺寸放大两倍，但是这个时候，我们的边框宽度依然是 `1px = 2pt`，因此，当我们开始缩小之后，就能得到一个 `0.5px = 1pt` 的极细边框。
+    这里的核心思路就是在 `dpr = 2` 时，我们先把伪类宽高尺寸放大两倍，但是这个时候，我们的边框宽度依然是 `1px = 2pt`，因此，当我们开始缩小之后，就能得到一个 `0.5px = 1pt` 的极细边框。
 
-
+  </article>
   <Footer/>
 </MainContent>

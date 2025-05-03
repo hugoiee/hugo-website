@@ -33,8 +33,12 @@ const withMDX = createMDX({
       // @ts-expect-error 异常报错
       ['remark-math', { strict: true, throwOnError: true }],
     ],
-    // @ts-expect-error 异常报错
-    rehypePlugins: [['rehype-katex', { strict: true, throwOnError: true }]],
+    rehypePlugins: [
+      // @ts-expect-error 异常报错
+      ['rehype-katex', { strict: true, throwOnError: true }],
+      // @ts-expect-error 异常报错
+      ['rehype-slug', { strict: true, throwOnError: true }],
+    ],
     // 启用 JSX
     jsx: true,
   },

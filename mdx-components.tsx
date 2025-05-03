@@ -7,21 +7,33 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     ...components,
     h1: (props) => (
       <h1
+        id="h1"
         className="mt-5 mb-4 border-b-2 pb-4 text-[2rem] leading-5 font-bold"
         {...props}
       />
     ),
     h2: (props) => (
       <h2
+        id="h2"
         className="mt-5 mb-4 border-b-2 pb-4 text-2xl leading-5 font-bold"
         {...props}
       />
     ),
-    h3: (props) => <h3 className="mt-5 mb-4 text-lg font-bold" {...props} />,
-    h4: (props) => <h4 className="mt-5 mb-4 text-base font-bold" {...props} />,
-    h5: (props) => <h5 className="mt-5 mb-4 text-sm font-bold" {...props} />,
+    h3: (props) => (
+      <h3 id="h3" className="mt-5 mb-4 text-lg font-bold" {...props} />
+    ),
+    h4: (props) => (
+      <h4 id="h4" className="mt-5 mb-4 text-base font-bold" {...props} />
+    ),
+    h5: (props) => (
+      <h5 id="h5" className="mt-5 mb-4 text-sm font-bold" {...props} />
+    ),
     h6: (props) => (
-      <h6 className="mt-5 mb-4 text-sm font-bold text-[#777777]" {...props} />
+      <h6
+        id="h6"
+        className="mt-5 mb-4 text-sm font-bold text-[#777777]"
+        {...props}
+      />
     ),
     // **加粗**
     strong: (props) => (
