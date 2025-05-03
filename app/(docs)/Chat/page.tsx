@@ -1,11 +1,9 @@
 'use client'
 
-const AiDoc = () => {
-  return (
-    <div className="mx-auto flex w-full max-w-[1024px] px-7.5 pt-8">
-      闲聊专栏
-    </div>
-  )
+import ChatDocTable from '@/components/table/ChatDocTable'
+
+const ChatDoc = () => {
+  return <ChatDocTable />
 }
 
-export default AiDoc
+export default ChatDoc

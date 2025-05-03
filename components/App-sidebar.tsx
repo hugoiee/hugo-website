@@ -66,7 +66,7 @@ const itemsB = [
     title: 'Chat',
     url: '/Chat',
     icon: MessageCircleMore,
-    number: 0,
+    number: 1,
   },
 ]
 

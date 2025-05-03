@@ -1,5 +1,4 @@
 import Footer from "@/components/footer";
-import MainContent from "@/components/main-content";
 import Image from 'next/image'
 
 export const metadata = {
@@ -7,18 +6,14 @@ export const metadata = {
   description: '更详细的关于我😁',
 }
 
-<MainContent>
+<div className="mx-auto flex flex-col w-full max-w-[1024px] px-7.5 pt-8 pb-4">
   ## 我是谁
 
   嗨，我是 Hugo，一名 AI 从业者、Web 开发爱好者、喜欢 Coding 和分享新鲜事。
 
-  <br/>
-
   ## 我正在做什么
 
   我正在学习大模型的相关知识，偶尔写写文章。
-
-  <br/>
 
   ## 我的专业技能
 
@@ -45,6 +40,5 @@ export const metadata = {
     <Image src="./icon/skill/sass-light.svg" width={24} height={24} alt={''}/>
     <Image src="./icon/skill/ts-light.svg" width={24} height={24} alt={''}/>
   </div>
-
   <Footer/>
-</MainContent>
+</div>

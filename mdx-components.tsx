@@ -115,5 +115,6 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     td: ({ children }) => <td className="px-4 py-2">{children}</td>,
 
     // 自定义
+    p: (props) => <p className="my-4 leading-7" {...props} />,
   }
 }
