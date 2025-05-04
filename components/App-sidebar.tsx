@@ -30,45 +30,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from '@/components/ui/sidebar'
-
-const itemsA = [
-  {
-    title: '首页',
-    url: '/',
-    icon: Home,
-  },
-  {
-    title: '关于我',
-    url: '/About',
-    icon: CircleUser,
-  },
-]
-const itemsB = [
-  {
-    title: 'AI那些事',
-    url: '/AI',
-    icon: BrainCircuit,
-    number: 1,
-  },
-  {
-    title: 'WebDev',
-    url: '/Web',
-    icon: Code,
-    number: 1,
-  },
-  {
-    title: 'Design',
-    url: '/Design',
-    icon: Palette,
-    number: 1,
-  },
-  {
-    title: 'Chat',
-    url: '/Chat',
-    icon: MessageCircleMore,
-    number: 1,
-  },
-]
+import { sideA, sideB } from '@/lib/data'
 
 export function AppSidebar() {
   const pathname = usePathname()
@@ -91,7 +53,7 @@ export function AppSidebar() {
         <SidebarGroup>
           <SidebarGroupContent>
             <SidebarMenu>
-              {itemsA.map((item) => (
+              {sideA.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild isActive={pathname === item.url}>
                     <Link
@@ -109,10 +71,10 @@ export function AppSidebar() {
         </SidebarGroup>
 
         <SidebarGroup>
-          <SidebarGroupLabel>文章专栏</SidebarGroupLabel>
+          <SidebarGroupLabel>合集</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
-              {itemsB.map((item) => (
+              {sideB.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton
                     asChild
