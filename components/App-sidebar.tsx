@@ -1,15 +1,6 @@
 'use client'
 
-import {
-  BrainCircuit,
-  ChevronUp,
-  CircleUser,
-  Code,
-  Home,
-  MessageCircleMore,
-  Palette,
-  User2,
-} from 'lucide-react'
+import { ChevronUp, User2 } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
