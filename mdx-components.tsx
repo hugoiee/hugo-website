@@ -8,7 +8,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     h1: (props) => (
       <h1
         id="h1"
-        className="mt-5 mb-4 border-b-2 pb-4 text-[2rem] leading-5 font-bold"
+        className="mt-5 mb-4 border-b-2 pb-4 text-[2rem] leading-12 font-bold"
         {...props}
       />
     ),

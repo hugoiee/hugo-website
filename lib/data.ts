@@ -18,7 +18,7 @@ export const sideB = [
     title: '博客',
     url: '/Blog',
     icon: Rss,
-    number: 5,
+    number: 9,
   },
 ]
 
@@ -28,7 +28,7 @@ export const BlogList = [
     title: '1px精度问题',
     body: '1px引发的精度偏移问题',
     update: '2025-3-2',
-    url: '/Blog/1pxAccurate',
+    url: '/Blog/250302',
     tag: '#CSS',
   },
   {
@@ -36,7 +36,7 @@ export const BlogList = [
     title: '提问的智慧',
     body: '写这篇文章的目的，是因为我发现有挺多的人在向我问问题时，提问的方式搞得我很烦。所以想要做这样一个科普，帮助你更好向其他人咨询问题，还不败坏好感值。',
     update: '2025-3-9',
-    url: '/Blog/QuestionsPrompt',
+    url: '/Blog/250309',
     tag: '#闲聊',
   },
   {
@@ -44,7 +44,7 @@ export const BlogList = [
     title: '像素与分辨率',
     body: 'CSS中最常用的属性是 px ，但是px是一个抽象逻辑单位，在不同的显示器分辨率、系统缩放比例、网页缩放比例下，px 所代表的物理像素是不一样的。本文是为了帮助大家更好的梳理清楚他们之间的关系。',
     update: '2025-3-16',
-    url: '/Blog/Resolution',
+    url: '/Blog/250316',
     tag: '#CSS',
   },
   {
@@ -52,7 +52,7 @@ export const BlogList = [
     title: 'Agent or WorkFLow',
     body: '什么是Agent？什么是WorkFlow？他们两者是什么关系？',
     update: '2025-3-23',
-    url: '/Blog/AgentVsWorkflow',
+    url: '/Blog/250323',
     tag: '#AI',
   },
   {
@@ -60,7 +60,40 @@ export const BlogList = [
     title: '《恋爱圣经》',
     body: '男性婚恋自我保护法，如何识破对方PUA的招数。',
     update: '2025-3-30',
-    url: '/Blog/TheBookOfLove',
+    url: '/Blog/250330',
     tag: '#闲聊',
+  },
+  {
+    id: '250420',
+    title: 'AI 时代进入了下半场',
+    body: '过去几十年，AI 的发展核心是创造新算法和新模型。 这条路确实取得了卓越的成果：从击败国际象棋和围棋冠军，到超过大部分人类通过 SAT、律师资格考试，再到摘得国际数学和信息学奥赛的金牌。无论是历史上著名的 DeepBlue、AlphaGo、GPT-4，还是最近火热的 o 系列，这些里程碑背后都有一些基础性的创新：搜索算法、深度强化学习、模型规模扩展，以及推理能力提升。AI 就这样一路稳步向前，那么，为什么现在突然出现了转折呢？',
+    update: '2025-4-20',
+    url: '/Blog/250420',
+    tag: '#AI',
+  },
+  {
+    id: '250425',
+    title: '如何避免在 AI 时代技能退化',
+    body: '如何使用 AI 编程助手，同时不让自己来之不易的工程技能逐渐荒废? 随着 AI 助手在编程领域的崛起，我们面临着一个矛盾：一方面，生产力大幅提升；另一方面，如果不加以注意，我们的技能会因闲置或疏于练习而不断退化。这种“技能退化”指的是，由于缺乏使用或练习，技能水平随时间下降的现象。',
+    update: '2025-4-25',
+    url: '/Blog/250425',
+    tag: '#AI',
+  },
+  {
+    id: '250501',
+    title: 'Google NotebookLM 系统提示词',
+    body: 'Google NotebookLM 已经支持了中文，效果挺不错的，我其实挺好奇它系统提示词是怎么写的，于是尝试着逆向了一下，根据逆向的结果再反向推导了它的系统提示词，它的提示词一句话总结就是......',
+    update: '2025-5-1',
+    url: '/Blog/250501',
+    tag: '#AI',
+  },
+  {
+    id: '250504',
+    title:
+      '如果我把一个主播平时回答过的问题都交给 AI 训练，是不是以后问 AI 就可以和问主播一样的效果了？',
+    body: '我有录播一个我喜欢的某个行业的主播直播，自动录播。我曾经想过，如果我把他几个月的直播都转换成文字然后给Ai训练，那么是不是我问任何问题就和问他一样了？因为他直播的形式就是不停回答评论区观众关于这个行业的各种问题。',
+    update: '2025-5-4',
+    url: '/Blog/250504',
+    tag: '#AI',
   },
 ]
