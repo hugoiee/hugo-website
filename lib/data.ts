@@ -18,7 +18,7 @@ export const sideB = [
     title: '博客',
     url: '/Blog',
     icon: Rss,
-    number: 4,
+    number: 5,
   },
 ]
 
@@ -54,5 +54,13 @@ export const BlogList = [
     update: '2025-3-23',
     url: '/Blog/AgentVsWorkflow',
     tag: '#AI',
+  },
+  {
+    id: '250330',
+    title: '《恋爱圣经》',
+    body: '男性婚恋自我保护法，如何识破对方PUA的招数。',
+    update: '2025-3-30',
+    url: '/Blog/TheBookOfLove',
+    tag: '#闲聊',
   },
 ]
